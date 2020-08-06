@@ -1,0 +1,130 @@
+/* 
+*ObsidianIMF_Dark by https://github.com/Engr-AllanG/trilium-theme-ObsidianIMF_Dark
+
+*Theme color scheme based on from nickmilo's IMF theme implimented in Obsidian: https://github.com/nickmilo/IMF-v3
+
+*/
+
+body {
+    --main-text-color: #2e8ea6; /**/
+    --main-background-color: #26272c; /**/
+    --main-border-color: #7a8ba654; /**/
+    --accented-background-color: #000000; /*tabs, background for some context windwos. black */
+    --more-accented-background-color: #878795; /**/
+    --header-background-color: #393838; /**/
+    --button-background-color: #878795;
+    --button-border-color: #8d9ca39c;
+    --button-border-radius: 6px;
+    --link-color: #d669bc; /**/
+    --modal-background-color: #282525; /**/
+    --menu-background-color: #383C4A;
+    --menu-text-color: #AFB8C6;
+    --tooltip-background-color: #383C4A;
+    --active-item-background-color: #e6e600;
+    --hover-item-background-color: #878795;/* menu items*/
+    --input-background-color: #878795; /*note title background color */
+}
+
+::selection {
+    color: #000000;
+    background: #e6e600; /**/
+}
+
+body h1{
+    color: #878795; /**/
+    font-weight: 900;
+}
+body h2{
+    color: #878795; /**/
+    font-weight: 900;
+}
+body h3{
+    color: #878795; /**/
+    font-weight: 500;
+}
+body h4{
+    color: #878795; /**/
+    font-weight: 500;
+}
+body h5{
+    color: #878795; /**/
+    font-weight: 500;
+}
+strong {
+  color: #aeaa01; /**/
+  font-weight: 700;
+}
+i {
+  color: #9741bb; !important /**/
+}
+  
+blockquote{
+    color:  #9741bb; /**/
+}
+
+/* Make Code More Readable by changing font FiraCode and making the size a tad smaller*/
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css);
+
+.CodeMirror-lines {
+  font-family: 'Fira Code', monospace !important;
+  font-size: 0.9rem !important;
+  color: turquoise !important;
+}
+
+
+#header {
+    padding-top: 0 !important; 
+}
+
+/* Just making the global button have the same spacing as the article title to the right */
+#global-buttons {
+    padding: 0 !important;
+    margin: 4px 15px 5px 5px !important;
+}
+
+
+/* Make the note title box rounded like the buttons and make sure the text is no longer flushed against the right side */
+.note-title {
+    border-radius: 5px;
+    padding-right: 5px;
+    
+}
+
+.note-tab-row .note-tab[active] .note-tab-wrapper{ /* this is the active note tab*/
+    background-color: #878795 !important; /* I know, throwing !important on everything is bad practice.... */
+   --main-text-color: #000000 !important; /* */
+}
+
+.note-tab-row .note-tab[active] .note-tab-close{
+ color:#000000;   
+}
+
+.note-tab-close{
+    color: #878795;
+}
+
+
+/*left pane and tree coloring*/
+
+.tree{
+ background-color: #000000;
+ color: #878795
+ /*font-weight:900;*/
+}
+
+.note-paths-widget.component{
+ background-color: #000000;   
+}
+
+.global-buttons.component{
+ background-color: #000000;   
+}
+
+.component.hide-in-zen-mode{
+ background-color: #000000;   
+}
+
+/* Make the code editor readable */
+.cm-s-default .cm-builtin { color: #9368f7 !important; }
+.cm-s-default .cm-qualifier { color: #4d9c28 !important; }
+.cm-s-default .cm-atom { color: #d23a8c !important; }
