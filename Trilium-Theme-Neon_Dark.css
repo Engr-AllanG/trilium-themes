@@ -1,9 +1,7 @@
-/* 
-*Neon_Dark by https://github.com/Engr-AllanG/trilium-theme-Neon_Dark
+/* Neon_Dark by https://github.com/Engr-AllanG/trilium-theme-Neon_Dark */
+/*v2: updated code blocks color scheme (purple/black); cleaned up some code */
+/*Theme color scheme originally based on nickmilo's IMF theme implimented in Obsidian: https://github.com/nickmilo/IMF-v3 */
 
-*Theme color scheme based on from nickmilo's IMF theme implimented in Obsidian: https://github.com/nickmilo/IMF-v3
-
-*/
 
 body {
     --main-text-color: #2e8ea6; /**/
@@ -16,62 +14,116 @@ body {
     --button-border-color: #8d9ca39c;
     --button-border-radius: 6px;
     --link-color: #d669bc; /**/
-    --modal-background-color: #282525; /**/
-    --menu-background-color: #383C4A;
+    --modal-background-color: #282525; /*dark grey, less blue*/
+    --menu-background-color: #383C4A; /*dark grey, more blue*/
     --menu-text-color: #AFB8C6;
     --tooltip-background-color: #383C4A;
     --active-item-background-color: #e6e600;
     --hover-item-background-color: #878795;/* menu items*/
-    --input-background-color: #878795; /*note title background color */
+    --input-background-color: #878795; /*note title background col*/
+    --main-font-family: Tahoma;
+    --detail-font-family: Baskerville;
+    /*--muted-text-color: #A117F2;*/
 }
 
 ::selection {
     color: #000000;
-    background: #e6e600; /**/
+    background: #e6e600; 
+}
+body {
+      font-family: Baskerville;
 }
 
 body h1{
-    color: #878795; /**/
-    font-weight: 900;
+    color: #878795;
+    font-weight: 700;
+    font-family: Tahoma;
 }
+
 body h2{
-    color: #878795; /**/
-    font-weight: 900;
+    color: #878795; 
+    font-weight: 700;
+    font-family: Tahoma;
 }
 body h3{
-    color: #878795; /**/
-    font-weight: 500;
+    color: #878795; 
+    font-weight: 600;
+    font-family: Tahoma;
 }
 body h4{
-    color: #878795; /**/
-    font-weight: 500;
+    color: #878795; 
+    font-weight: 600;
+    font-family: Tahoma;
 }
 body h5{
-    color: #878795; /**/
-    font-weight: 500;
+    color: #878795; 
+    font-weight: 600;
+    font-family: Tahoma;
 }
-strong {
-  color: #aeaa01; /**/
+body h6{
+    font-size: 19.2px; /*not specific enough to override*/
+    font-family: Tahoma;
+}
+
+body strong {
+  color: #aeaa01; 
   font-weight: 700;
 }
-i {
+
+body i {
   color: #9741bb; !important /**/
 }
   
-blockquote{
+body blockquote{
     color:  #9741bb; /**/
 }
 
-/* Make Code More Readable by changing font FiraCode and making the size a tad smaller*/
-@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css);
 
-.CodeMirror-lines {
-  font-family: 'Fira Code', monospace !important;
-  font-size: 0.9rem !important;
-  color: turquoise !important;
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css);
+/*have to use pre code in order to override font color which is inhertied as !important */
+/*alternative to below is background #878795, with black text or black background and purple text #A117F2*/
+
+.ck.ck-editor__editable pre {
+    background: #878795; 
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem; /* .9 */
+    border-color: #000000;
+   
+}
+
+.ck-content pre code  {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem; /* .9 */
+    background: #878795; 
+    color: #000000 !important; /*have to use this because line 468 style.css has !importat inherited on color */
+}
+.ck.ck-editor__editable code  {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem; /* .9 */
+    background: #878795; 
+    color: #000000 !important; /*have to use this because line 468 style.css has !importat inherited on color for code */
+}
+
+.ck.ck-editor__editable .ck-code_selected {
+    background-color: #878795 !important;
 }
 
 
+/* Edit code font FiraCode and making the size a tad smaller*/
+/*had to use pre.CodeMirror-line to overide pre above*/
+pre.CodeMirror-line {
+  font-family: 'Fira Code', monospace !important;
+  font-size: 0.9rem !important;
+  color: #999999 !important;
+  background: #26272c;
+}
+
+/*adjust the cursor color - default is black and you can barely see it in dark mode*/
+.CodeMirror-cursor {
+ border-left: 1px solid #dc3545 !important;
+}
+
+/*ID selectors*/
 #header {
     padding-top: 0 !important; 
 }
@@ -108,7 +160,7 @@ blockquote{
 
 .tree{
  background-color: #000000;
- color: #878795
+ color: #878795 /*#878795*/
  /*font-weight:900;*/
 }
 
@@ -128,3 +180,5 @@ blockquote{
 .cm-s-default .cm-builtin { color: #9368f7 !important; }
 .cm-s-default .cm-qualifier { color: #4d9c28 !important; }
 .cm-s-default .cm-atom { color: #d23a8c !important; }
+.cm-s-default .cm-def { color: #9191ff !important; }
+
