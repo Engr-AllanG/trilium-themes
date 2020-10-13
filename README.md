@@ -5,6 +5,7 @@ Most recent update modifies code blocks ad code format color scheme, fonts, and 
 It is compatable starting with trilium 0.43.3. It will likely function with previous versions
 
 ## Screenshot Demo
+![demo picture](/Screenshots/updated list color and font.png)
 ![demo picture](/Screenshots/Neon_Dark_Demo1.jpeg)
 
 ## Notes
