@@ -1,6 +1,6 @@
 # Theme Neon_Dark
 This is a theme for [trilium](https://github.com/zadam/trilium)
-Most recent update modifies code blocks ad code format color scheme, fonts, and minor tweaks
+In v3 I chaned the check list text to orange color. I changed primary font to Baskerville. Some other minor tweaks
 
 It is compatable starting with trilium 0.43.3. It will likely function with previous versions
 
