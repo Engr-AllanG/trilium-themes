@@ -1,111 +1,130 @@
 /* Neon_Dark by https://github.com/Engr-AllanG/trilium-theme-Neon_Dark */
-/*v2: updated code blocks color scheme (purple/black); cleaned up some code */
+/*v3: Changed check list color. Changed font */
 /*Theme color scheme originally based on nickmilo's IMF theme implimented in Obsidian: https://github.com/nickmilo/IMF-v3 */
 
-
+:root{
+    --text-teal: #2e8ea6;
+    --background-dark: #26272c;/**/
+    --accent-black: #000000;/**/
+    --accent-light: #878795; /*878795 de3121*/
+    --bright-pink: #DE38C8;/**/
+    --bright-purple: #8D68C7;/*#722EC7*/
+    --bright-light: #AFB8C6;
+    --bright-yellow: #aeaa01;/**/
+    --bright-red: #AB723E;
+}
 body {
-    --main-text-color: #2e8ea6; /**/
-    --main-background-color: #26272c; /**/
+    --main-text-color: var(--text-teal); /**/
+    --main-background-color: var(--background-dark); /**/
     --main-border-color: #7a8ba654; /**/
-    --accented-background-color: #000000; /*tabs, background for some context windwos. black */
-    --more-accented-background-color: #878795; /**/
-    --header-background-color: #393838; /**/
-    --button-background-color: #878795;
-    --button-border-color: #8d9ca39c;
+    --accented-background-color: var(--accent-black); /*tabs, background for some context windwos. black */
+    --more-accented-background-color: var(--accent-light); /**/
+    --header-background-color: var(--background-dark); /**/
+    --button-background-color: var(--accent-light);
+    --button-border-color: var(--accent-black);
     --button-border-radius: 6px;
-    --link-color: #d669bc; /**/
-    --modal-background-color: #282525; /*dark grey, less blue*/
-    --menu-background-color: #383C4A; /*dark grey, more blue*/
-    --menu-text-color: #AFB8C6;
-    --tooltip-background-color: #383C4A;
-    --active-item-background-color: #e6e600;
-    --hover-item-background-color: #878795;/* menu items*/
-    --input-background-color: #878795; /*note title background col*/
+    --link-color: var(--bright-pink); /**/
+    --modal-background-color: var(--background-dark); /*dark grey, less blue*/
+    --menu-background-color: var(--accent-light); /*dark grey, more blue*/
+    --menu-text-color: var(--accent-black);
+    --tooltip-background-color: var(--background-dark);
+    --active-item-background-color: var(--bright-yellow);
+    --hover-item-background-color: var(--accent-light);/* menu items*/
+    --input-background-color: var(--accent-light); /*note title background col*/
     --main-font-family: Tahoma;
-    --detail-font-family: Baskerville;
+    --detail-font-family: Baskerville;/*Consolas Baskerville;*/
     /*--muted-text-color: #A117F2;*/
 }
 
 ::selection {
-    color: #000000;
-    background: #e6e600; 
+    color: var(--accent-black);
+    background: var(--bright-yellow); 
 }
 body {
-      font-family: Baskerville;
+      font-family: Baskerville; /*Baskerville;*/
 }
 
 body h1{
-    color: #878795;
+    color: var(--accent-light);
     font-weight: 700;
     font-family: Tahoma;
 }
 
 body h2{
-    color: #878795; 
+    color: var(--accent-light); 
     font-weight: 700;
     font-family: Tahoma;
 }
 body h3{
-    color: #878795; 
+    color: var(--accent-light); 
     font-weight: 600;
     font-family: Tahoma;
 }
 body h4{
-    color: #878795; 
+    color: var(--accent-light); 
     font-weight: 600;
     font-family: Tahoma;
 }
 body h5{
-    color: #878795; 
+    color: var(--accent-light); 
     font-weight: 600;
     font-family: Tahoma;
 }
 body h6{
     font-size: 19.2px; /*not specific enough to override*/
     font-family: Tahoma;
+    /*color: var(--bright-red);*/
+}
+ul.todo-list li{
+    color: var(--bright-red);
+    font-family: Baskerville;
 }
 
 body strong {
-  color: #aeaa01; 
+  color: var(--bright-yellow); 
   font-weight: 700;
 }
 
 body i {
-  color: #9741bb; !important /**/
+  color: var(--bright-purple); !important /**/
 }
   
 body blockquote{
-    color:  #9741bb; /**/
+    color:  var(--bright-purple); /**/
+}
+
+body li{
+    color: var(--text-teal);
 }
 
 
 @import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css);
 /*have to use pre code in order to override font color which is inhertied as !important */
-/*alternative to below is background #878795, with black text or black background and purple text #A117F2*/
+/*alternative to below is background $accent-light, with black text .or black background and purple text #A117F2*/
 
 .ck.ck-editor__editable pre {
-    background: #878795; 
+    background: var(--accent-light); 
     font-family: 'Fira Code', monospace;
     font-size: 0.8rem; /* .9 */
-    border-color: #000000;
+    border-color: var(--accent-black);
    
 }
 
 .ck-content pre code  {
     font-family: 'Fira Code', monospace;
     font-size: 0.8rem; /* .9 */
-    background: #878795; 
-    color: #000000 !important; /*have to use this because line 468 style.css has !importat inherited on color */
+    background: var(--accent-light); 
+    color: var(--accent-black) !important; /*have to use this because line 468 style.css has !importat inherited on color */
 }
 .ck.ck-editor__editable code  {
     font-family: 'Fira Code', monospace;
     font-size: 0.8rem; /* .9 */
-    background: #878795; 
-    color: #000000 !important; /*have to use this because line 468 style.css has !importat inherited on color for code */
+    background: var(--accent-light); 
+    color: var(--accent-black) !important; /*have to use this because line 468 style.css has !importat inherited on color for code */
 }
 
 .ck.ck-editor__editable .ck-code_selected {
-    background-color: #878795 !important;
+    background-color: var(--accent-light) !important;
 }
 
 
@@ -115,7 +134,7 @@ pre.CodeMirror-line {
   font-family: 'Fira Code', monospace !important;
   font-size: 0.9rem !important;
   color: #999999 !important;
-  background: #26272c;
+  background: var(--background-dark);
 }
 
 /*adjust the cursor color - default is black and you can barely see it in dark mode*/
@@ -143,37 +162,47 @@ pre.CodeMirror-line {
 }
 
 .note-tab-row .note-tab[active] .note-tab-wrapper{ /* this is the active note tab*/
-    background-color: #878795 !important; /* I know, throwing !important on everything is bad practice.... */
-   --main-text-color: #000000 !important; /* */
+    background-color: var(--accent-light) !important; /* I know, throwing !important on everything is bad practice.... */
+   --main-text-color: var(--accent-black) !important; /* */
 }
 
 .note-tab-row .note-tab[active] .note-tab-close{
- color:#000000;   
+ color: var(--accent-black);   
 }
 
 .note-tab-close{
-    color: #878795;
+    color: var(--accent-light);
 }
 
 
 /*left pane and tree coloring*/
 
 .tree{
- background-color: #000000;
- color: #878795 /*#878795*/
+ background-color: var(--accent-black);
+ color: var(--accent-light); /*#878795*/
  /*font-weight:900;*/
 }
 
+.tree li{
+    color: var(--accent-light);
+}
+
 .note-paths-widget.component{
- background-color: #000000;   
+ background-color: var(--accent-black);   
 }
 
 .global-buttons.component{
- background-color: #000000;   
+ background-color: var(--accent-black);   
 }
 
 .component.hide-in-zen-mode{
- background-color: #000000;   
+ background-color: var(--accent-black);   
+}
+
+span.fancytree-active:not(.fancytree-focused) .fancytree-title{
+    color: var(--accent-black) !important;
+    background-color: var(--accent-light) !important;
+    border-color: var(--accent-light) !important;
 }
 
 /* Make the code editor readable */
