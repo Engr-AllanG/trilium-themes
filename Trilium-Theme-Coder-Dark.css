@@ -1,0 +1,246 @@
+/* Coder_Dark by https://github.com/Engr-AllanG/trilium-themes */
+/*v1: Initial release */
+/*Theme color scheme based on gruvbox*/
+
+:root{
+    --text_primary: var(--accent-light); /*#689d6a;*/
+    --text_secondary: #1d2021;
+    --heading-color: var(--bright-yellow);
+    --bg0-dark: #1d2021;
+    --bg1-dark: #282828;
+
+    --accent-light: #a89984; 
+    
+    --bright-red: #cc241d;
+    --green: #98971a;
+    --bright-yellow: #d79921;/**/
+    --bright-blue: #458588;
+    --bright-purple: #b16286;/*#722EC7*/
+    --bright-orange: #d65d0e;
+    
+    --aqua: #689d6a;/**/
+    
+    
+    
+}
+body {
+    --main-text-color: var(--text_primary); /**/
+    --main-background-color: var(--bg1-dark); /**/
+    --main-border-color: #7a8ba654; /**/
+    --accented-background-color: var(--bg0-dark); /*tabs, background for some context windwos. black */
+    --more-accented-background-color: var(--accent-light); /**/
+    --header-background-color: var(--bg1-dark); /**/
+    --button-background-color: var(--accent-light);
+    --button-border-color: var(--bg0-dark);
+    --button-border-radius: 6px;
+    --link-color: var(--bright-purple); /**/
+    --modal-background-color: var(--bg1-dark); /*dark grey, less blue*/
+    --menu-background-color: var(--accent-light); /*dark grey, more blue*/
+    --menu-text-color: var(--text_secondary);
+    --tooltip-background-color: var(--bg1-dark);
+    --active-item-background-color: var(--aqua);
+    --hover-item-background-color: var(--accent-light);/* menu items*/
+    --input-background-color: var(--accent-light); /*note title background col*/
+    --main-font-family: Tahoma;
+    --detail-font-family: Baskerville;/*Consolas Baskerville;*/
+    
+}
+
+::selection {
+    color: var(--bg0-dark);
+    background: var(--aqua); 
+}
+body {
+      font-family: Baskerville; 
+}
+
+body h1{
+    color: var(--heading-color);
+    font-weight: 700;
+    font-family: Tahoma;
+}
+
+body h2{
+    color: var(--heading-color); 
+    font-weight: 700;
+    font-family: Tahoma;
+}
+body h3{
+    color: var(--heading-color); 
+    font-weight: 600;
+    font-family: Tahoma;
+}
+body h4{
+    color: var(--heading-color); 
+    font-weight: 600;
+    font-family: Tahoma;
+}
+body h5{
+    color: var(--heading-color); 
+    font-weight: 600;
+    font-family: Tahoma;
+}
+body h6{
+    color: var(--heading-color);
+    font-size: 19.2px; /*not specific enough to override*/
+    font-family: Tahoma;
+    /*color: var(--bright-red);*/
+}
+
+ul.todo-list li{
+    color: var(--text-primary);
+    font-family: Baskerville;
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
+  
+}
+
+.ck-content .todo-list .todo-list__label > input {
+     height: 10px !important;
+     width: 10px!important;
+}
+body strong {
+  color: var(--bright-orange); 
+  font-weight: 700;
+}
+
+body i {
+  color: var(--bright-blue); !important /**/
+}
+  
+body blockquote{
+    color:  var(--bright-blue); /**/
+}
+
+body li{
+    color: var(--text_primary);
+}
+
+/** to change bullets
+ul {
+  list-style: none; /* Remove default bullets */
+/*}
+
+/*ul li::before {
+/*  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+/*  color: var(--bright-red); /* Change the color */
+/*  font-weight: bold; /* If you want it to be bold */
+ /* display: inline-block; /* Needed to add space between the bullet and the text */
+/*  width: 1em; /* Also needed for space (tweak if needed) */
+/*  margin-left: -1em; /* Also needed for space (tweak if needed) */
+/*}
+/*end change bullets */
+
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css);
+/*have to use pre code in order to override font color which is inhertied as !important */
+/*alternative to below is background $accent-light, with black text .or black background and purple text #A117F2*/
+
+.ck.ck-editor__editable pre {
+    background: var(--accent-light); 
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem; /* .9 */
+    border-color: var(--bg0-dark);
+   
+}
+
+.ck-content pre code  {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem; /* .9 */
+    background: var(--accent-light); 
+    color: var(--bg0-dark) !important; /*have to use this because line 468 style.css has !importat inherited on color */
+}
+.ck.ck-editor__editable code  {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem; /* .9 */
+    background: var(--accent-light); 
+    color: var(--bg0-dark) !important; /*have to use this because line 468 style.css has !importat inherited on color for code */
+}
+
+.ck.ck-editor__editable .ck-code_selected {
+    background-color: var(--accent-light) !important;
+}
+
+
+/* Edit code font FiraCode and making the size a tad smaller*/
+/*had to use pre.CodeMirror-line to overide pre above*/
+pre.CodeMirror-line {
+  font-family: 'Fira Code', monospace !important;
+  font-size: 0.9rem !important;
+  color: var(--bright-red) !important; /*#999999*/
+  background: var(--bg1-dark);
+}
+
+/*adjust the cursor color - default is black and you can barely see it in dark mode*/
+.CodeMirror-cursor {
+ border-left: 1px solid #dc3545 !important;
+}
+
+/*ID selectors*/
+#header {
+    padding-top: 0 !important; 
+}
+
+/* Just making the global button have the same spacing as the article title to the right */
+#global-buttons {
+    padding: 0 !important;
+    margin: 4px 15px 5px 5px !important;
+}
+
+
+/* Make the note title box rounded like the buttons and make sure the text is no longer flushed against the right side */
+.note-title {
+    border-radius: 5px;
+    padding-right: 5px;
+    
+}
+
+.note-tab-row .note-tab[active] .note-tab-wrapper{ /* this is the active note tab*/
+    background-color: var(--accent-light) !important; /* I know, throwing !important on everything is bad practice.... */
+   --main-text-color: var(--bg0-dark) !important; /* */
+}
+
+.note-tab-row .note-tab[active] .note-tab-close{
+ color: var(--bg0-dark);   
+}
+
+.note-tab-close{
+    color: var(--accent-light);
+}
+
+
+/*left pane and tree coloring*/
+
+.tree{
+ background-color: var(--bg0-dark);
+ color: var(--accent-light); /*#878795*/
+ /*font-weight:900;*/
+}
+
+.tree li{
+    color: var(--accent-light);
+}
+
+.note-paths-widget.component{
+ background-color: var(--bg0-dark);   
+}
+
+.global-buttons.component{
+ background-color: var(--bg0-dark);   
+}
+
+.component.hide-in-zen-mode{
+ background-color: var(--bg0-dark);   
+}
+
+span.fancytree-active:not(.fancytree-focused) .fancytree-title{
+    color: var(--bg0-dark) !important;
+    background-color: var(--accent-light) !important;
+    border-color: var(--accent-light) !important;
+}
+
+/* Make the code editor readable */
+.cm-s-default .cm-builtin { color: #9368f7 !important; }
+.cm-s-default .cm-qualifier { color: #4d9c28 !important; }
+.cm-s-default .cm-atom { color: #d23a8c !important; }
+.cm-s-default .cm-def { color: #9191ff !important; }
+
