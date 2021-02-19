@@ -12,7 +12,7 @@ It is compatable starting with trilium 0.43.3. It will likely function with prev
 Color scheme is based on gruvbox
 
 ## Coder_Dark Screenshot Demo
-
+![demo picture](/Screenshots/Trilium_theme_coder_dark.png)
 ## Notes
 See [here](https://github.com/zadam/trilium/wiki/Themes) for installation instructions. You need to add an attribute of type Label with name appTheme and no value. After setting the attribute, you need to select the theme in options. You may need to re-load the front end (ctrl-r).
 
