@@ -1,3 +1,12 @@
+#Theme Logseq
+This is a theme for [Trilium Next](https://github.com/TriliumNext/Notes)
+
+![image](https://github.com/user-attachments/assets/99ecd1bd-ed0d-4805-b29e-1d95c10898ee)
+
+
+
+*These older themes might be broken on newer versions of Trilium*
+
 # Theme Neon_Dark
 This is a theme for [trilium](https://github.com/zadam/trilium).
 In v3 I chaned the check list text to orange color. I changed primary font to Baskerville. Some other minor tweaks
