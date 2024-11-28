@@ -1,11 +1,12 @@
-#Theme Logseq
+# Theme Logseq
 This is a theme for [Trilium Next](https://github.com/TriliumNext/Notes)
+Code was adapted from https://github.com/DavidFuchs/trilium-chameleon-theme, I simply adjusted the color scheme
 
 ![image](https://github.com/user-attachments/assets/99ecd1bd-ed0d-4805-b29e-1d95c10898ee)
 
 
 
-*These older themes might be broken on newer versions of Trilium*
+*These older themes below might be broken on newer versions of Trilium*
 
 # Theme Neon_Dark
 This is a theme for [trilium](https://github.com/zadam/trilium).
